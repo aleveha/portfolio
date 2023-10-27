@@ -1,15 +1,36 @@
-@import url("tailwindcss/base.css");
-@import url("tailwindcss/components.css");
-@import url("tailwindcss/utilities.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
 
-body {
-	@apply font-sans text-base;
+@layer base {
+    body {
+        @apply font-sans text-base;
 
-	&.light {
-		@apply bg-white;
-	}
+        &.light {
+            @apply bg-white;
+        }
 
-	&.dark {
-		@apply bg-gray-900 text-white;
-	}
+        &.dark {
+            @apply bg-gray-900 text-white;
+        }
+    }
+}
+
+@layer components {
+    .ui-container {
+        @apply container px-4;
+    }
+
+    .ui-typo-h1 {
+        @apply font-custom text-3xl md:text-4xl lg:text-5xl font-bold leading-normal md:leading-normal lg:leading-normal;
+    }
+
+    .ui-typo-large {
+        @apply text-lg md:text-xl lg:text-2xl font-medium;
+    }
+
+    .flashing-dot {
+        @apply bg-orange-500 text-orange-500 rounded-full w-[0.2em] aspect-square;
+    }
 }

@@ -13,6 +13,12 @@ export default {
 				sans: ["var(--font-base)", ...fontFamily.sans],
 				custom: ["var(--font-custom)", ...fontFamily.sans],
 			},
+			keyframes: {
+				"flashing-dot": {
+					"0%": { backgroundColor: "#f97316" },
+					"50%, 100%": { backgroundColor: "rgba(249, 115, 22, 0.4)" },
+				},
+			},
 			screens: {
 				sm: em(576),
 				md: em(768),
